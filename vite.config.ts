@@ -4,6 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
+    base: '/sports-imports/',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -52,9 +53,5 @@
     build: {
       target: 'esnext',
       outDir: 'build',
-    },
-    server: {
-      port: 3000,
-      open: true,
-    },
+    }
   });
