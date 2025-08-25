@@ -2,7 +2,7 @@
   "name": "Sports Imports - Equipamentos Esportivos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://HeitorPaula.github.io/sports-imports/",
+  "homepage": "https://heitorpaula.github.io/sports-imports/",
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-alert-dialog": "^1.1.6",

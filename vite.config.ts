@@ -1,11 +1,8 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-  import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/sports-imports/', // Caminho correto para o GitHub Pages
-  build: {
-    outDir: 'build', // Onde o Vite vai gerar os arquivos
-  },
+  base: "/sports-imports/", // 👈 Caminho do repositório exato
 });
