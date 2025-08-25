@@ -5,7 +5,7 @@ import { ScrollArea } from './ui/scroll-area';
 import { useFavorites } from '../hooks/useFavorites';
 import { useCart } from '../hooks/useCart';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { toast } from 'sonner@2.0.3';
+import { toast } from "sonner";
 
 interface FavoritesProps {
   isOpen: boolean;

@@ -5,7 +5,7 @@ import { Separator } from './ui/separator';
 import { Badge } from './ui/badge';
 import { useCart } from '../hooks/useCart';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface CartProps {
   isOpen: boolean;
