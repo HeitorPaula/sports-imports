@@ -3,7 +3,7 @@ name: Deploy Vite to GitHub Pages
 on:
   push:
     branches:
-      - main  # Ou a branch que você usa
+      - main
 
 jobs:
   build-and-deploy:
@@ -20,7 +20,7 @@ jobs:
           cache: "npm"
 
       - name: Instalar dependências
-        run: npm ci
+        run: npm install  # ou npm ci se o lockfile estiver correto
 
       - name: Build do projeto
         run: npm run build
@@ -29,4 +29,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist   # <-- ALTERADO
