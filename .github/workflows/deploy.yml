@@ -1,16 +1,16 @@
-name: Deploy Vite App to GitHub Pages
+name: Deploy Vite to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # ou a branch que você usa
+      - main  # sua branch principal
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Faz checkout do código
+      # 1. Faz o checkout do repositório
       - name: Checkout do código
         uses: actions/checkout@v3
 
@@ -19,19 +19,19 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: npm
 
       # 3. Instala as dependências
       - name: Instalar dependências
         run: npm install
 
       # 4. Build do projeto
-      - name: Rodar build do Vite
+      - name: Build do projeto
         run: npm run build
 
-      # 5. Deploy para GitHub Pages
+      # 5. Publica na branch gh-pages
       - name: Deploy para GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        run: |
+          git config --global user.name "HeitorPaula"
+          git config --global user.email "heitor@example.com"
+          npx gh-pages -d dist
