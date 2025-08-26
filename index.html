@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Imports - Equipamentos Esportivos Premium</title>
+    <meta name="description" content="Sua loja online de equipamentos esportivos importados com qualidade premium e preços competitivos.">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiNkYzI2MjYiLz4KPHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiB4PSI3IiB5PSI3Ij4KPHBhdGggZD0ibTYuOSAxMy45IDEuMDkgNC4xNyAxLjMyLjg3TDE2LjggMThsLS4yNi0xIi8+CjxwYXRoIGQ9Im0xMy41IDcuNCAtMi4yNiA4LjNjLS4zNSAxLjI3LS44IDEuNDYtMS42NiAxLjQ2cy0xLjMxLS4xOS0xLjY2LTEuNDZMMy44OCAyLjEyYTEuNDIgMS40MiAwIDAgMSAxLjM0LTEuOTRDMTEuNzcuNzMgMTYuNjEgMi4yNyAyMCA2Yy42NC42OSAxLjE2IDEuNDYgMS41OCAyLjI5Ii8+CjxwYXRoIGQ9Im0xNiAyIDQuMzMgMTAuNzVjLjM3IDEuMDktLjE5IDIuMjktMS4yNyAyLjc5Ii8+Cjwvc3ZnPgo8L3N2Zz4K">
+    
+    <style>
+        /* CSS Inline para garantir carregamento */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .promo-bar {
+            background: #dc2626;
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            gap: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: #dc2626;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .logo-text p {
+            font-size: 12px;
+            color: #666;
+            margin: 0;
+        }
+        
+        .search-container {
+            flex: 1;
+            max-width: 400px;
+            margin: 0 20px;
+        }
+        
+        .search-form {
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #dc2626;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .header-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            border: 2px solid #dc2626;
+            background: transparent;
+            color: #dc2626;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+            position: relative;
+        }
+        
+        .header-btn:hover {
+            background: #dc2626;
+            color: white;
+        }
+        
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #dc2626;
+            color: white;
+            border-radius: 50%;
+            min-width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        /* Navigation */
+        .nav-container {
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .nav-content {
+            display: flex;
+            gap: 10px;
+            padding: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .category-btn {
+            padding: 8px 16px;
+            background: transparent;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: #dc2626;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
+            padding: 60px 0;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .text-highlight {
+            color: #dc2626;
+        }
+        
+        .hero-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .hero-features {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .hero-cta:hover {
+            background: #b91c1c;
+            transform: translateY(-2px);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* Products Section */
+        .products-section {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .search-results {
+            background: #eff6ff;
+            border: 1px solid #3b82f6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .clear-search-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: #dc2626;
+        }
+        
+        .product-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        
+        .product-discount {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #dc2626;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .product-favorite {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.9);
+            border: 1px solid #e5e7eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover .product-favorite {
+            opacity: 1;
+        }
+        
+        .product-favorite.active {
+            opacity: 1 !important;
+            background: #fef2f2;
+            border-color: #dc2626;
+            color: #dc2626;
+        }
+        
+        .product-shipping {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: #16a34a;
+            color: white;
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .product-card:hover .product-shipping {
+            opacity: 1;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-category {
+            display: inline-block;
+            background: #fef2f2;
+            color: #dc2626;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .product-card:hover .product-name {
+            color: #dc2626;
+        }
+        
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .rating-stars {
+            display: flex;
+            gap: 2px;
+        }
+        
+        .star {
+            color: #fbbf24;
+            font-size: 14px;
+        }
+        
+        .star.empty {
+            color: #e5e7eb;
+        }
+        
+        .rating-text {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .product-prices {
+            display: flex;
+            align-items: end;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .product-original-price {
+            font-size: 14px;
+            color: #666;
+            text-decoration: line-through;
+        }
+        
+        .product-installments {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .product-add-btn {
+            width: 100%;
+            padding: 12px;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .product-add-btn:hover {
+            background: #b91c1c;
+        }
+        
+        .product-add-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+        
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .no-results h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .no-results p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            background: #dc2626;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* Features Section */
+        .features-section {
+            background: #f9fafb;
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #fef2f2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            color: #dc2626;
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo .logo-icon {
+            background: #dc2626;
+        }
+        
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .footer-description {
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .payment-methods {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .payment-icons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 400px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sidebar.open {
+            right: 0;
+        }
+        
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .sidebar-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sidebar-close {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .sidebar-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .sidebar-footer {
+            padding: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .sidebar-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .sidebar-item-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .sidebar-item-content {
+            flex: 1;
+        }
+        
+        .sidebar-item-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+        
+        .sidebar-item-price {
+            color: #dc2626;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar-item-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .quantity-btn {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #e5e7eb;
+            background: white;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        
+        .quantity-btn:hover {
+            background: #f3f4f6;
+        }
+        
+        .quantity-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .remove-btn {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #ef4444;
+            background: white;
+            color: #ef4444;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        
+        .remove-btn:hover {
+            background: #fef2f2;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .empty-state-icon {
+            font-size: 48px;
+            color: #9ca3af;
+            margin-bottom: 20px;
+        }
+        
+        .empty-state h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .empty-state p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .cart-totals {
+            margin-bottom: 20px;
+        }
+        
+        .cart-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .cart-row.total {
+            font-weight: 600;
+            font-size: 16px;
+            padding-top: 10px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .btn-full {
+            width: 100%;
+            padding: 15px;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        
+        .btn-outline {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            color: #dc2626;
+            border: 2px solid #dc2626;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* Toast */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .toast {
+            background: #16a34a;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 300px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+        }
+        
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .toast.error {
+            background: #dc2626;
+        }
+        
+        .toast-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: auto;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .search-container {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .sidebar {
+                width: 100%;
+                right: -100%;
+            }
+            
+            .nav-content {
+                flex-wrap: wrap;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .btn-label {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+    
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebars()"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="promo-bar">
+            <div class="container">
+                🔥 FRETE GRÁTIS em compras acima de R$ 200 • Até 15 dias para devolução
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="showHome()">
+                    <div class="logo-icon">🏋️</div>
+                    <div class="logo-text">
+                        <h1>Sports Imports</h1>
+                        <p>Equipamentos Esportivos</p>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <form class="search-form" onsubmit="return false;">
+                        <input 
+                            type="text" 
+                            class="search-input" 
+                            placeholder="Buscar produtos..."
+                            id="searchInput"
+                            oninput="handleSearch(this.value)"
+                        >
+                    </form>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="header-btn" onclick="openFavorites()">
+                        ❤️ <span class="btn-label">Favoritos</span>
+                        <span id="favoritesBadge" class="badge hidden">0</span>
+                    </button>
+                    
+                    <button class="header-btn" onclick="openCart()">
+                        🛒 <span class="btn-label" id="cartTotal">R$ 0,00</span>
+                        <span id="cartBadge" class="badge hidden">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-container">
+            <div class="container">
+                <div class="nav-content" id="categoryNav">
+                    <!-- Categories will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div>
+                        <h1 class="hero-title">
+                            Equipamentos Esportivos<br>
+                            <span class="text-highlight">Premium</span>
+                        </h1>
+                        <p class="hero-description">
+                            Descubra nossa coleção completa de equipamentos esportivos importados 
+                            com qualidade premium e preços competitivos.
+                        </p>
+                        <div class="hero-features">
+                            <div class="feature-item">
+                                🚚 <span>Frete Grátis acima de R$ 200</span>
+                            </div>
+                            <div class="feature-item">
+                                🛡️ <span>Garantia de Qualidade</span>
+                            </div>
+                            <div class="feature-item">
+                                🔄 <span>15 dias para devolução</span>
+                            </div>
+                        </div>
+                        <button class="hero-cta" onclick="scrollToProducts()">
+                            Explorar Produtos →
+                        </button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" 
+                             alt="Equipamentos Esportivos">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section" id="productsSection">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossos Produtos</h2>
+                    <p>Descubra nossa seleção de equipamentos esportivos premium</p>
+                </div>
+
+                <!-- Search Results -->
+                <div id="searchResults" class="search-results hidden">
+                    <span id="searchResultsText"></span>
+                    <button class="clear-search-btn" onclick="clearSearch()">
+                        ✕ Limpar busca
+                    </button>
+                </div>
+
+                <!-- Products Grid -->
+                <div id="productsGrid" class="products-grid">
+                    <!-- Products will be inserted here -->
+                </div>
+
+                <!-- No Results -->
+                <div id="noResults" class="no-results hidden">
+                    <h3>🔍 Nenhum produto encontrado</h3>
+                    <p>Tente ajustar seus termos de busca ou navegar pelas categorias</p>
+                    <button class="btn-primary" onclick="clearSearch()">
+                        Ver todos os produtos
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Por que escolher a Sports Imports?</h2>
+                    <p>Oferecemos a melhor experiência em equipamentos esportivos</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚚</div>
+                        <h3>Entrega Rápida</h3>
+                        <p>Frete grátis em compras acima de R$ 200 e entrega expressa para todo o Brasil</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Qualidade Garantida</h3>
+                        <p>Produtos originais e testados com garantia completa de qualidade</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎧</div>
+                        <h3>Suporte Premium</h3>
+                        <p>Atendimento especializado para ajudar você a escolher o melhor equipamento</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Devolução Fácil</h3>
+                        <p>15 dias para devolução sem custos adicionais e processo simplificado</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🏋️</div>
+                        <div>
+                            <h3>Sports Imports</h3>
+                            <p>Equipamentos Esportivos Premium</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Sua loja online de confiança para equipamentos esportivos importados 
+                        com qualidade premium e preços competitivos.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#" onclick="setCategory('Todos')">Todos os Produtos</a></li>
+                        <li><a href="#" onclick="setCategory('Calçados')">Calçados</a></li>
+                        <li><a href="#" onclick="setCategory('Musculação')">Musculação</a></li>
+                        <li><a href="#" onclick="setCategory('Yoga')">Yoga</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Política de Devolução</a></li>
+                        <li><a href="#">Rastreamento</a></li>
+                        <li><a href="#">Frete Grátis</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:contato@sportsimports.com">contato@sportsimports.com</a></li>
+                        <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                        <li>Seg-Sex: 9h às 18h</li>
+                        <li>Sáb: 9h às 14h</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sports Imports. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <span>Aceitamos:</span>
+                    <div class="payment-icons">
+                        💳 📱 💰
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">
+                🛒 Carrinho
+            </div>
+            <button class="sidebar-close" onclick="closeCart()">✕</button>
+        </div>
+        <div class="sidebar-body" id="cartBody">
+            <!-- Cart items will be inserted here -->
+        </div>
+        <div class="sidebar-footer" id="cartFooter">
+            <!-- Cart footer will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Favorites Sidebar -->
+    <div id="favoritesSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">
+                ❤️ Favoritos
+            </div>
+            <button class="sidebar-close" onclick="closeFavorites()">✕</button>
+        </div>
+        <div class="sidebar-body" id="favoritesBody">
+            <!-- Favorites items will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let currentCategory = 'Todos';
+        let searchTerm = '';
+        let cart = JSON.parse(localStorage.getItem('sports-imports-cart') || '[]');
+        let favorites = JSON.parse(localStorage.getItem('sports-imports-favorites') || '[]');
+        
+        // Products data
+        const products = [
+            {
+                id: 'tenis-corrida-nike-1',
+                name: 'Tênis de Corrida Nike Air Zoom Pegasus 40',
+                description: 'Tênis de corrida com tecnologia Air Zoom para máximo conforto e performance.',
+                price: 799.99,
+                originalPrice: 999.99,
+                discount: 20,
+                category: 'Calçados',
+                image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80',
+                rating: 4.8,
+                reviews: 324,
+                inStock: true
+            },
+            {
+                id: 'tenis-basketball-jordan-1',
+                name: 'Tênis Basketball Air Jordan 1 Mid',
+                description: 'Tênis de basquete clássico com design icônico e tecnologia moderna.',
+                price: 899.99,
+                originalPrice: 1199.99,
+                discount: 25,
+                category: 'Calçados',
+                image: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80',
+                rating: 4.9,
+                reviews: 256,
+                inStock: true
+            },
+            {
+                id: 'tenis-training-adidas-1',
+                name: 'Tênis Training Adidas Ultraboost 22',
+                description: 'Tênis de treino com tecnologia Boost para energia infinita.',
+                price: 1199.99,
+                originalPrice: 1499.99,
+                discount: 20,
+                category: 'Calçados',
+                image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=800&q=80',
+                rating: 4.7,
+                reviews: 189,
+                inStock: true
+            },
+            {
+                id: 'halter-ajustavel-40kg',
+                name: 'Halter Ajustável 40kg PowerTech Pro',
+                description: 'Halter ajustável com sistema de travas rápidas e anilhas revestidas.',
+                price: 899.99,
+                originalPrice: 1299.99,
+                discount: 31,
+                category: 'Musculação',
+                image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
+                rating: 4.6,
+                reviews: 143,
+                inStock: true
+            },
+            {
+                id: 'banco-supino-regulavel',
+                name: 'Banco Supino Regulável ProGym Elite',
+                description: 'Banco multifuncional com 7 posições de inclinação e suporte até 300kg.',
+                price: 1499.99,
+                originalPrice: 1999.99,
+                discount: 25,
+                category: 'Musculação',
+                image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80',
+                rating: 4.8,
+                reviews: 97,
+                inStock: true
+            },
+            {
+                id: 'kit-anilhas-olimpicas-100kg',
+                name: 'Kit Anilhas Olímpicas 100kg Iron Master',
+                description: 'Conjunto completo de anilhas olímpicas com barra 20kg incluída.',
+                price: 1899.99,
+                originalPrice: 2499.99,
+                discount: 24,
+                category: 'Musculação',
+                image: 'https://images.unsplash.com/photo-1534368420009-621bea9deb8d?auto=format&fit=crop&w=800&q=80',
+                rating: 4.9,
+                reviews: 234,
+                inStock: true
+            },
+            {
+                id: 'tapete-yoga-premium-6mm',
+                name: 'Tapete Yoga Premium TPE 6mm EcoZen',
+                description: 'Tapete de yoga ecológico com aderência superior e alinhamento corporal.',
+                price: 199.99,
+                originalPrice: 299.99,
+                discount: 33,
+                category: 'Yoga',
+                image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80',
+                rating: 4.7,
+                reviews: 456,
+                inStock: true
+            },
+            {
+                id: 'bloco-yoga-cortica',
+                name: 'Bloco Yoga Cortiça Natural ZenBlock',
+                description: 'Bloco de yoga em cortiça 100% natural para apoio e alinhamento.',
+                price: 89.99,
+                originalPrice: 129.99,
+                discount: 31,
+                category: 'Yoga',
+                image: 'https://images.unsplash.com/photo-1506629905607-45781842d5b8?auto=format&fit=crop&w=800&q=80',
+                rating: 4.5,
+                reviews: 189,
+                inStock: true
+            },
+            {
+                id: 'garrafa-shaker-700ml-smart',
+                name: 'Garrafa Shaker 700ml SmartShake Pro',
+                description: 'Garrafa shaker inteligente com compartimentos e misturador de vórtex.',
+                price: 79.99,
+                originalPrice: 119.99,
+                discount: 33,
+                category: 'Acessórios',
+                image: 'https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?auto=format&fit=crop&w=800&q=80',
+                rating: 4.4,
+                reviews: 334,
+                inStock: true
+            },
+            {
+                id: 'faixa-elastica-kit-resistencia',
+                name: 'Kit Faixas Elásticas Resistência Total Power',
+                description: 'Kit completo com 5 faixas de resistência e acessórios para treino funcional.',
+                price: 149.99,
+                originalPrice: 229.99,
+                discount: 35,
+                category: 'Acessórios',
+                image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
+                rating: 4.7,
+                reviews: 445,
+                inStock: true
+            },
+            {
+                id: 'whey-protein-concentrado-2kg',
+                name: 'Whey Protein Concentrado 2kg Premium',
+                description: 'Proteína do soro do leite com 80% de proteína e sabor chocolate belga.',
+                price: 189.99,
+                originalPrice: 249.99,
+                discount: 24,
+                category: 'Suplementos',
+                image: 'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80',
+                rating: 4.8,
+                reviews: 789,
+                inStock: true
+            },
+            {
+                id: 'creatina-monohidratada-300g',
+                name: 'Creatina Monohidratada 300g Pure Creatine',
+                description: 'Creatina 100% pura, micronizada para absorção otimizada.',
+                price: 79.99,
+                originalPrice: 119.99,
+                discount: 33,
+                category: 'Suplementos',
+                image: 'https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?auto=format&fit=crop&w=800&q=80',
+                rating: 4.6,
+                reviews: 445,
+                inStock: false
+            }
+        ];
+        
+        const categories = ['Todos', 'Calçados', 'Musculação', 'Yoga', 'Acessórios', 'Suplementos'];
+        
+        // Utility functions
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            }).format(value);
+        }
+        
+        function generateStars(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                stars += i <= rating ? '⭐' : '☆';
+            }
+            return stars;
+        }
+        
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `
+                <span>${message}</span>
+                <button class="toast-close" onclick="this.parentElement.remove()">✕</button>
+            `;
+            
+            const container = document.getElementById('toastContainer');
+            container.appendChild(toast);
+            
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+        
+        // Storage functions
+        function saveCart() {
+            localStorage.setItem('sports-imports-cart', JSON.stringify(cart));
+            updateCartDisplay();
+        }
+        
+        function saveFavorites() {
+            localStorage.setItem('sports-imports-favorites', JSON.stringify(favorites));
+            updateFavoritesDisplay();
+        }
+        
+        // Cart functions
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product || !product.inStock) return;
+            
+            const existingItem = cart.find(item => item.productId === productId);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ productId, quantity: 1 });
+            }
+            
+            saveCart();
+            showToast(`${product.name} adicionado ao carrinho!`);
+            openCart();
+        }
+        
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.productId !== productId);
+            saveCart();
+            renderCart();
+            showToast('Item removido do carrinho');
+        }
+        
+        function updateQuantity(productId, newQuantity) {
+            if (newQuantity <= 0) {
+                removeFromCart(productId);
+                return;
+            }
+            
+            const item = cart.find(item => item.productId === productId);
+            if (item) {
+                item.quantity = newQuantity;
+                saveCart();
+                renderCart();
+            }
+        }
+        
+        function clearCart() {
+            cart = [];
+            saveCart();
+            renderCart();
+            showToast('Carrinho limpo com sucesso');
+        }
+        
+        function getCartTotal() {
+            return cart.reduce((total, item) => {
+                const product = products.find(p => p.id === item.productId);
+                return total + (product ? product.price * item.quantity : 0);
+            }, 0);
+        }
+        
+        function getCartItemCount() {
+            return cart.reduce((total, item) => total + item.quantity, 0);
+        }
+        
+        // Favorites functions
+        function toggleFavorite(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            const index = favorites.findIndex(fav => fav.id === productId);
+            if (index >= 0) {
+                favorites.splice(index, 1);
+                showToast(`${product.name} removido dos favoritos`);
+            } else {
+                favorites.push(product);
+                showToast(`${product.name} adicionado aos favoritos!`);
+            }
+            
+            saveFavorites();
+            renderProducts();
+            renderFavorites();
+        }
+        
+        function isFavorite(productId) {
+            return favorites.some(fav => fav.id === productId);
+        }
+        
+        // Filter functions
+        function getFilteredProducts() {
+            let filtered = products;
+            
+            if (currentCategory !== 'Todos') {
+                filtered = filtered.filter(product => product.category === currentCategory);
+            }
+            
+            if (searchTerm.trim()) {
+                const searchLower = searchTerm.toLowerCase();
+                filtered = filtered.filter(product =>
+                    product.name.toLowerCase().includes(searchLower) ||
+                    product.description.toLowerCase().includes(searchLower) ||
+                    product.category.toLowerCase().includes(searchLower)
+                );
+            }
+            
+            return filtered;
+        }
+        
+        // Render functions
+        function renderCategories() {
+            const nav = document.getElementById('categoryNav');
+            nav.innerHTML = categories.map(category => `
+                <button 
+                    class="category-btn ${category === currentCategory ? 'active' : ''}"
+                    onclick="setCategory('${category}')"
+                >
+                    ${category}
+                </button>
+            `).join('');
+        }
+        
+        function renderProducts() {
+            const filtered = getFilteredProducts();
+            const grid = document.getElementById('productsGrid');
+            const searchResults = document.getElementById('searchResults');
+            const searchResultsText = document.getElementById('searchResultsText');
+            const noResults = document.getElementById('noResults');
+            
+            // Show/hide search results
+            if (searchTerm.trim() || currentCategory !== 'Todos') {
+                searchResults.classList.remove('hidden');
+                let text = '';
+                if (searchTerm.trim() && currentCategory !== 'Todos') {
+                    text = `${filtered.length} produtos encontrados para "${searchTerm}" em ${currentCategory}`;
+                } else if (searchTerm.trim()) {
+                    text = `${filtered.length} produtos encontrados para "${searchTerm}"`;
+                } else if (currentCategory !== 'Todos') {
+                    text = `${filtered.length} produtos em ${currentCategory}`;
+                }
+                searchResultsText.textContent = text;
+            } else {
+                searchResults.classList.add('hidden');
+            }
+            
+            // Show/hide no results
+            if (filtered.length === 0 && (searchTerm.trim() || currentCategory !== 'Todos')) {
+                noResults.classList.remove('hidden');
+                grid.classList.add('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                grid.classList.remove('hidden');
+            }
+            
+            // Render products
+            grid.innerHTML = filtered.map(product => `
+                <div class="product-card" onclick="showProductDetails('${product.id}')">
+                    <div class="product-image-container">
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        ${product.discount > 0 ? `<div class="product-discount">-${product.discount}%</div>` : ''}
+                        <button 
+                            class="product-favorite ${isFavorite(product.id) ? 'active' : ''}"
+                            onclick="event.stopPropagation(); toggleFavorite('${product.id}')"
+                        >
+                            ${isFavorite(product.id) ? '❤️' : '🤍'}
+                        </button>
+                        ${product.price >= 200 ? '<div class="product-shipping">🚚 Frete Grátis</div>' : ''}
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-rating">
+                            <div class="rating-stars">${generateStars(product.rating)}</div>
+                            <span class="rating-text">${product.rating} (${product.reviews})</span>
+                        </div>
+                        <div class="product-prices">
+                            <span class="product-price">${formatCurrency(product.price)}</span>
+                            ${product.discount > 0 ? `<span class="product-original-price">${formatCurrency(product.originalPrice)}</span>` : ''}
+                        </div>
+                        <p class="product-installments">12x de ${formatCurrency(product.price / 12)} sem juros</p>
+                        <button 
+                            class="product-add-btn"
+                            onclick="event.stopPropagation(); addToCart('${product.id}')"
+                            ${!product.inStock ? 'disabled' : ''}
+                        >
+                            🛒 ${product.inStock ? 'Adicionar' : 'Esgotado'}
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function renderCart() {
+            const body = document.getElementById('cartBody');
+            const footer = document.getElementById('cartFooter');
+            
+            if (cart.length === 0) {
+                body.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🛒</div>
+                        <h3>Carrinho vazio</h3>
+                        <p>Adicione produtos para começar suas compras!</p>
+                        <button class="btn-primary" onclick="closeCart()">Continuar Comprando</button>
+                    </div>
+                `;
+                footer.innerHTML = '';
+                return;
+            }
+            
+            body.innerHTML = cart.map(item => {
+                const product = products.find(p => p.id === item.productId);
+                if (!product) return '';
+                
+                return `
+                    <div class="sidebar-item">
+                        <img src="${product.image}" alt="${product.name}" class="sidebar-item-image">
+                        <div class="sidebar-item-content">
+                            <h4 class="sidebar-item-name">${product.name}</h4>
+                            <p class="sidebar-item-price">${formatCurrency(product.price)}</p>
+                            <div class="sidebar-item-actions">
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" onclick="updateQuantity('${product.id}', ${item.quantity - 1})" ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
+                                    <span>${item.quantity}</span>
+                                    <button class="quantity-btn" onclick="updateQuantity('${product.id}', ${item.quantity + 1})">+</button>
+                                </div>
+                                <button class="remove-btn" onclick="removeFromCart('${product.id}')">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            const total = getCartTotal();
+            const shippingCost = total >= 200 ? 0 : 15.90;
+            const finalTotal = total + shippingCost;
+            
+            footer.innerHTML = `
+                <div class="cart-totals">
+                    <div class="cart-row">
+                        <span>Subtotal:</span>
+                        <span>${formatCurrency(total)}</span>
+                    </div>
+                    <div class="cart-row">
+                        <span>Frete:</span>
+                        <span>${shippingCost === 0 ? 'GRÁTIS' : formatCurrency(shippingCost)}</span>
+                    </div>
+                    <div class="cart-row total">
+                        <span>Total:</span>
+                        <span>${formatCurrency(finalTotal)}</span>
+                    </div>
+                </div>
+                <button class="btn-full" onclick="finishOrder()">
+                    Finalizar Compra
+                </button>
+                <button class="btn-outline" onclick="clearCart()">
+                    Limpar Carrinho
+                </button>
+            `;
+        }
+        
+        function renderFavorites() {
+            const body = document.getElementById('favoritesBody');
+            
+            if (favorites.length === 0) {
+                body.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">❤️</div>
+                        <h3>Nenhum favorito ainda</h3>
+                        <p>Adicione produtos aos favoritos para vê-los aqui</p>
+                        <button class="btn-primary" onclick="closeFavorites()">Explorar Produtos</button>
+                    </div>
+                `;
+                return;
+            }
+            
+            body.innerHTML = favorites.map(product => `
+                <div class="sidebar-item">
+                    <img src="${product.image}" alt="${product.name}" class="sidebar-item-image">
+                    <div class="sidebar-item-content">
+                        <h4 class="sidebar-item-name">${product.name}</h4>
+                        <p class="sidebar-item-price">${formatCurrency(product.price)}</p>
+                        <div class="sidebar-item-actions">
+                            <button class="btn-primary" onclick="addToCart('${product.id}')" ${!product.inStock ? 'disabled' : ''}>
+                                ${product.inStock ? '🛒 Adicionar' : 'Esgotado'}
+                            </button>
+                            <button class="remove-btn" onclick="toggleFavorite('${product.id}')">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function updateCartDisplay() {
+            const badge = document.getElementById('cartBadge');
+            const total = document.getElementById('cartTotal');
+            const itemCount = getCartItemCount();
+            const cartTotal = getCartTotal();
+            
+            if (itemCount > 0) {
+                badge.textContent = itemCount;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+            
+            total.textContent = formatCurrency(cartTotal);
+        }
+        
+        function updateFavoritesDisplay() {
+            const badge = document.getElementById('favoritesBadge');
+            
+            if (favorites.length > 0) {
+                badge.textContent = favorites.length;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+        }
+        
+        // Navigation functions
+        function setCategory(category) {
+            currentCategory = category;
+            renderCategories();
+            renderProducts();
+        }
+        
+        function handleSearch(value) {
+            searchTerm = value;
+            renderProducts();
+        }
+        
+        function clearSearch() {
+            searchTerm = '';
+            currentCategory = 'Todos';
+            document.getElementById('searchInput').value = '';
+            renderCategories();
+            renderProducts();
+        }
+        
+        function scrollToProducts() {
+            document.getElementById('productsSection').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+        
+        function showHome() {
+            clearSearch();
+        }
+        
+        function showProductDetails(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            // For now, just add to cart
+            addToCart(productId);
+        }
+        
+        // Sidebar functions
+        function openCart() {
+            renderCart();
+            document.getElementById('cartSidebar').classList.add('open');
+            document.getElementById('sidebarOverlay').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeCart() {
+            document.getElementById('cartSidebar').classList.remove('open');
+            document.getElementById('sidebarOverlay').classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        
+        function openFavorites() {
+            renderFavorites();
+            document.getElementById('favoritesSidebar').classList.add('open');
+            document.getElementById('sidebarOverlay').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeFavorites() {
+            document.getElementById('favoritesSidebar').classList.remove('open');
+            document.getElementById('sidebarOverlay').classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        
+        function closeSidebars() {
+            closeCart();
+            closeFavorites();
+        }
+        
+        function finishOrder() {
+            showToast('Pedido realizado com sucesso! Obrigado pela compra! 🎉');
+            clearCart();
+            closeCart();
+        }
+        
+        // Initialize app
+        function init() {
+            renderCategories();
+            renderProducts();
+            updateCartDisplay();
+            updateFavoritesDisplay();
+        }
+        
+        // Start app when page loads
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
