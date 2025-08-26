@@ -1,3 +1,4 @@
+/*************  ✨ Windsurf Command 🌟  *************/
 // Sports Imports - Constants and Configuration
 
 // Application configuration
@@ -48,6 +49,17 @@ const BREAKPOINTS = {
   LARGE: 1280
 };
 
+if (typeof window !== 'undefined') {
+  window.APP_CONFIG = APP_CONFIG;
+  window.STORAGE_KEYS = STORAGE_KEYS;
+  window.CATEGORIES = CATEGORIES;
+  window.SHIPPING_CONFIG = SHIPPING_CONFIG;
+  window.ANIMATION_DURATION = ANIMATION_DURATION;
+  window.TOAST_CONFIG = TOAST_CONFIG;
+  window.BREAKPOINTS = BREAKPOINTS;
+} else {
+  console.warn('Window object not found. Cannot export constants to global scope.');
+}
 // Export to global scope
 window.APP_CONFIG = APP_CONFIG;
 window.STORAGE_KEYS = STORAGE_KEYS;
