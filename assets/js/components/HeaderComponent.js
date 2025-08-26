@@ -228,3 +228,4 @@ class HeaderComponent {
 
 // Export to global scope
 window.HeaderComponent = HeaderComponent;
+window.Header = new HeaderComponent();
