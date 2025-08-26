@@ -1,7 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig(({ mode }) => ({
+// Substitua "sports-imports" pelo nome exato do seu repositório
+export default defineConfig({
   plugins: [react()],
-  base: mode === "production" ? "/sports-imports/" : "/",
-}));
+  base: "/sports-imports/",
+});
