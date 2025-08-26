@@ -1,4 +1,5 @@
 // Sports Imports - Main Application (GitHub Pages Ready)
+import HeaderComponent from './components/HeaderComponent.js';
 class SportsImportsApp {
   constructor() {
     this.state = {

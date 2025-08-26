@@ -3,7 +3,7 @@
 /*************  ✨ Windsurf Command 🌟  *************/
 // Sports Imports - Header Component
 
-class HeaderComponent {
+export default class HeaderComponent {
   constructor() {
     this.elements = {};
     this.state = {
