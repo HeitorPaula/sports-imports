@@ -1,5 +1,8 @@
 // Sports Imports - Header Component
 
+/*************  ✨ Windsurf Command 🌟  *************/
+// Sports Imports - Header Component
+
 class HeaderComponent {
   constructor() {
     this.elements = {};
@@ -33,6 +36,12 @@ class HeaderComponent {
       navMobile: document.getElementById('navMobile'),
       navDesktop: document.getElementById('navDesktop')
     };
+    
+    if (!this.elements.searchInput || !this.elements.searchInputMobile || !this.elements.searchClear || !this.elements.searchClearMobile || 
+        !this.elements.favoritesBtn || !this.elements.favoritesBadge || !this.elements.cartBtn || !this.elements.cartBadge || !this.elements.cartTotal || 
+        !this.elements.mobileMenuBtn || !this.elements.menuIcon || !this.elements.navMobile || !this.elements.navDesktop) {
+      console.error('HeaderComponent: Missing element in DOM');
+    }
   }
   
   setupEventListeners() {
@@ -78,6 +87,10 @@ class HeaderComponent {
   }
   
   renderCategories() {
+    if (!this.elements.navDesktop || !this.elements.navMobile) {
+      console.error('HeaderComponent: Missing nav elements in DOM');
+      return;
+    }
     if (!this.elements.navDesktop || !this.elements.navMobile) return;
     
     const desktopHTML = CATEGORIES.map(category => `
