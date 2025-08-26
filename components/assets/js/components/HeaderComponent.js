@@ -228,3 +228,6 @@ class HeaderComponent {
 
 // Export to global scope
 window.HeaderComponent = HeaderComponent;
+
+// Instância global
+window.Header = new HeaderComponent();
