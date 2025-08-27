@@ -1,4 +1,4 @@
-// Sports Imports - Toast Notifications
+// Sports Imports - Toast Notifications (Identical to React version)
 
 const Toast = {
   container: null,
@@ -9,76 +9,67 @@ const Toast = {
       if (!this.container) {
         this.container = document.createElement('div');
         this.container.id = 'toastContainer';
-        this.container.className = 'toast-container';
+        this.container.className = 'fixed top-4 right-4 z-50 flex flex-col gap-2';
         document.body.appendChild(this.container);
       }
     }
   },
   
-  show(message, type = 'success', duration = null) {
+  show(message, type = 'success', duration = 3000) {
     this.init();
     
     const toast = document.createElement('div');
-    const toastId = 'toast-' + Utils.generateId();
+    const toastId = 'toast-' + Date.now() + Math.random().toString(36).substr(2, 9);
     
-    const toastDuration = duration || TOAST_CONFIG.DURATION[type.toUpperCase()] || 3000;
+    const bgColor = type === 'error' ? 'bg-red-600' : 'bg-green-600';
     
     toast.id = toastId;
-    toast.className = `toast toast-${type}`;
+    toast.className = `${bgColor} text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-3 min-w-80 transform translate-x-full opacity-0 transition-all duration-300`;
     toast.innerHTML = `
-      <div class="toast-content">
-        <div class="toast-icon">
-          ${this.getIcon(type)}
-        </div>
-        <div class="toast-message">${Utils.escapeHtml(message)}</div>
-        <button class="toast-close" onclick="Toast.remove('${toastId}')">
-          <i data-lucide="x"></i>
-        </button>
+      <div class="flex items-center gap-2">
+        <i data-lucide="${this.getIcon(type)}" class="w-4 h-4 flex-shrink-0"></i>
+        <span class="text-sm font-medium">${message}</span>
       </div>
-      <div class="toast-progress"></div>
+      <button onclick="Toast.remove('${toastId}')" class="text-white/80 hover:text-white ml-auto">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
     `;
     
     this.container.appendChild(toast);
     
+    // Initialize icons
     if (window.lucide) {
       lucide.createIcons();
     }
     
-    setTimeout(() => toast.classList.add('show'), 10);
+    // Show toast
+    setTimeout(() => {
+      toast.classList.remove('translate-x-full', 'opacity-0');
+      toast.classList.add('translate-x-0', 'opacity-100');
+    }, 10);
     
-    if (toastDuration > 0) {
-      const progressBar = toast.querySelector('.toast-progress');
-      if (progressBar) {
-        progressBar.style.animationDuration = `${toastDuration}ms`;
-        progressBar.classList.add('animate');
-      }
-      
-      setTimeout(() => this.remove(toastId), toastDuration);
+    // Auto remove
+    if (duration > 0) {
+      setTimeout(() => {
+        this.remove(toastId);
+      }, duration);
     }
     
     return toastId;
   },
   
-  success(message, duration = null) {
+  success(message, duration = 3000) {
     return this.show(message, 'success', duration);
   },
   
-  error(message, duration = null) {
+  error(message, duration = 4000) {
     return this.show(message, 'error', duration);
-  },
-  
-  warning(message, duration = null) {
-    return this.show(message, 'warning', duration);
-  },
-  
-  info(message, duration = null) {
-    return this.show(message, 'info', duration);
   },
   
   remove(toastId) {
     const toast = document.getElementById(toastId);
     if (toast) {
-      toast.classList.add('hide');
+      toast.classList.add('translate-x-full', 'opacity-0');
       setTimeout(() => {
         if (toast.parentNode) {
           toast.parentNode.removeChild(toast);
@@ -89,13 +80,11 @@ const Toast = {
   
   getIcon(type) {
     const icons = {
-      success: '<i data-lucide="check-circle"></i>',
-      error: '<i data-lucide="x-circle"></i>',
-      warning: '<i data-lucide="alert-triangle"></i>',
-      info: '<i data-lucide="info"></i>'
+      success: 'check-circle',
+      error: 'x-circle'
     };
     
-    return icons[type] || icons.info;
+    return icons[type] || icons.success;
   }
 };
 

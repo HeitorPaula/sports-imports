@@ -1,10 +1,10 @@
-// Sports Imports - Storage Management
+// Sports Imports - Storage Management (Identical to React version)
 
 // Cart Storage
 const CartStorage = {
   getItems() {
     try {
-      const saved = localStorage.getItem(STORAGE_KEYS.CART);
+      const saved = localStorage.getItem('sports-imports-cart');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -13,7 +13,7 @@ const CartStorage = {
   
   setItems(items) {
     try {
-      localStorage.setItem(STORAGE_KEYS.CART, JSON.stringify(items));
+      localStorage.setItem('sports-imports-cart', JSON.stringify(items));
       window.dispatchEvent(new CustomEvent('cart-changed'));
       return true;
     } catch {
@@ -72,7 +72,7 @@ const CartStorage = {
 const FavoritesStorage = {
   getItems() {
     try {
-      const saved = localStorage.getItem(STORAGE_KEYS.FAVORITES);
+      const saved = localStorage.getItem('sports-imports-favorites');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -81,7 +81,7 @@ const FavoritesStorage = {
   
   setItems(items) {
     try {
-      localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(items));
+      localStorage.setItem('sports-imports-favorites', JSON.stringify(items));
       window.dispatchEvent(new CustomEvent('favorites-changed'));
       return true;
     } catch {

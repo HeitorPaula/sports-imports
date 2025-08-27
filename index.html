@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Imports - Equipamentos Esportivos Premium</title>
     <meta name="description" content="Sua loja online de equipamentos esportivos importados com qualidade premium e preços competitivos. Frete grátis acima de R$ 200.">
-    <meta name="keywords" content="equipamentos esportivos, tênis, musculação, yoga, suplementos, frete grátis">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seu-usuario.github.io/sports-imports/">
     <meta property="og:title" content="Sports Imports - Equipamentos Esportivos Premium">
     <meta property="og:description" content="Sua loja online de equipamentos esportivos importados com qualidade premium e preços competitivos.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80">
@@ -27,140 +25,117 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loadingScreen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <div class="logo-container">
-                    <div class="logo-icon animate-pulse">
-                        <i data-lucide="dumbbell"></i>
-                    </div>
-                    <div class="logo-badge"></div>
-                </div>
-                <h2 class="loading-title">Sports Imports</h2>
-                <p class="loading-subtitle">Equipamentos Esportivos Premium</p>
-            </div>
-            <div class="loading-animation">
-                <div class="loading-spinner"></div>
-                <div class="loading-text">Carregando produtos incríveis...</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Toast Container -->
-    <div id="toastContainer" class="toast-container"></div>
-
-    <!-- App Container -->
-    <div id="appContainer" class="app-container hidden">
+    <div class="min-h-screen flex flex-col bg-background">
         <!-- Header -->
-        <header class="header" id="header">
-            <!-- Promo Bar -->
-            <div class="promo-bar">
-                <div class="container">
-                    <div class="promo-content">
-                        <i data-lucide="flame"></i>
-                        <span>FRETE GRÁTIS em compras acima de R$ 200 • Até 15 dias para devolução</span>
-                    </div>
+        <header class="bg-card shadow-sm sticky top-0 z-50 border-b border-border">
+            <!-- Barra promocional superior -->
+            <div class="bg-red-600 text-white py-2">
+                <div class="container mx-auto px-4 text-center">
+                    <p class="text-sm font-medium">
+                        🔥 FRETE GRÁTIS em compras acima de R$ 200 • Até 15 dias para devolução
+                    </p>
                 </div>
             </div>
 
-            <!-- Header Main -->
-            <div class="header-main">
-                <div class="container">
-                    <div class="header-content">
-                        <!-- Logo -->
-                        <div class="logo" onclick="App.navigateHome()">
-                            <div class="logo-container">
-                                <div class="logo-icon">
-                                    <i data-lucide="dumbbell"></i>
-                                </div>
-                                <div class="logo-badge"></div>
-                            </div>
-                            <div class="logo-text">
-                                <h1>Sports Imports</h1>
-                                <p>Equipamentos Esportivos</p>
-                            </div>
+            <!-- Header principal -->
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between gap-4">
+                    <!-- Logo -->
+                    <div class="flex items-center gap-3">
+                        <div class="relative bg-red-600 p-3 rounded-xl shadow-lg">
+                            <i data-lucide="dumbbell" class="w-6 h-6 text-white"></i>
+                            <div class="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full"></div>
                         </div>
-
-                        <!-- Search Bar - Desktop -->
-                        <div class="search-container desktop-only">
-                            <form class="search-form" id="searchForm">
-                                <div class="search-input-wrapper">
-                                    <i data-lucide="search" class="search-icon"></i>
-                                    <input 
-                                        type="text" 
-                                        placeholder="Buscar produtos, marcas, categorias..."
-                                        class="search-input"
-                                        id="searchInput"
-                                        autocomplete="off"
-                                    >
-                                    <button type="button" class="search-clear hidden" id="searchClear">
-                                        <i data-lucide="x"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Header Actions -->
-                        <div class="header-actions">
-                            <!-- Favorites Button -->
-                            <button class="header-btn favorites-btn" id="favoritesBtn">
-                                <div class="btn-icon">
-                                    <i data-lucide="heart"></i>
-                                    <span class="badge hidden" id="favoritesBadge">0</span>
-                                </div>
-                                <span class="btn-label desktop-only">Favoritos</span>
-                            </button>
-
-                            <!-- Cart Button -->
-                            <button class="header-btn cart-btn" id="cartBtn">
-                                <div class="btn-icon">
-                                    <i data-lucide="shopping-cart"></i>
-                                    <span class="badge hidden" id="cartBadge">0</span>
-                                </div>
-                                <span class="btn-label desktop-only" id="cartTotal">R$ 0,00</span>
-                            </button>
-
-                            <!-- Mobile Menu -->
-                            <button class="header-btn mobile-menu-btn mobile-only" id="mobileMenuBtn">
-                                <i data-lucide="menu" id="menuIcon"></i>
-                            </button>
+                        <div>
+                            <h1 class="text-xl font-bold text-foreground">Sports Imports</h1>
+                            <p class="text-xs text-muted-foreground">Equipamentos Esportivos</p>
                         </div>
                     </div>
 
-                    <!-- Search Mobile -->
-                    <div class="search-mobile mobile-only">
-                        <form class="search-form" id="searchFormMobile">
-                            <div class="search-input-wrapper">
-                                <i data-lucide="search" class="search-icon"></i>
-                                <input 
-                                    type="text" 
-                                    placeholder="Buscar produtos..."
-                                    class="search-input"
-                                    id="searchInputMobile"
-                                    autocomplete="off"
-                                >
-                                <button type="button" class="search-clear hidden" id="searchClearMobile">
-                                    <i data-lucide="x"></i>
-                                </button>
-                            </div>
+                    <!-- Barra de pesquisa - Desktop -->
+                    <div class="hidden md:flex flex-1 max-w-md mx-6">
+                        <form id="searchFormDesktop" class="relative w-full">
+                            <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4"></i>
+                            <input 
+                                type="text"
+                                id="searchInputDesktop"
+                                placeholder="Buscar produtos, marcas, categorias..." 
+                                class="input pl-10 border-border focus:border-red-500 focus:ring-red-500/20 bg-input-background w-full"
+                            />
+                            <button
+                                type="button"
+                                id="clearSearchDesktop"
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 h-6 w-6 p-0 hover:bg-gray-200 rounded hidden"
+                            >
+                                <i data-lucide="x" class="w-3 h-3"></i>
+                            </button>
                         </form>
                     </div>
+
+                    <!-- Favoritos, Carrinho e menu -->
+                    <div class="flex items-center gap-2">
+                        <!-- Favoritos -->
+                        <button 
+                            id="favoritesBtn"
+                            class="btn btn-outline btn-sm relative border-red-200 hover:bg-red-50 hover:border-red-300 text-red-600"
+                        >
+                            <i data-lucide="heart" class="w-4 h-4"></i>
+                            <span id="favoritesBadge" class="badge absolute -top-2 -right-2 bg-red-600 hover:bg-red-600 min-w-5 h-5 flex items-center justify-center p-0 text-xs text-white hidden">0</span>
+                            <span class="hidden lg:inline ml-2 font-medium">Favoritos</span>
+                        </button>
+
+                        <!-- Carrinho -->
+                        <button 
+                            id="cartBtn"
+                            class="btn btn-outline btn-sm relative border-red-200 hover:bg-red-50 hover:border-red-300 text-red-600"
+                        >
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span id="cartBadge" class="badge absolute -top-2 -right-2 bg-red-600 hover:bg-red-600 min-w-5 h-5 flex items-center justify-center p-0 text-xs text-white hidden">0</span>
+                            <span id="cartTotal" class="hidden sm:inline ml-2 font-medium">R$ 0,00</span>
+                        </button>
+
+                        <button
+                            id="mobileMenuBtn"
+                            class="btn btn-outline btn-sm md:hidden border-border"
+                        >
+                            <i id="mobileMenuIcon" data-lucide="menu" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pesquisa mobile -->
+                <div class="md:hidden mt-4">
+                    <form id="searchFormMobile" class="relative">
+                        <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4"></i>
+                        <input 
+                            type="text"
+                            id="searchInputMobile"
+                            placeholder="Buscar produtos, marcas, categorias..." 
+                            class="input pl-10 pr-10 border-border bg-input-background w-full"
+                        />
+                        <button
+                            type="button"
+                            id="clearSearchMobile"
+                            class="absolute right-2 top-1/2 transform -translate-y-1/2 h-6 w-6 p-0 hover:bg-gray-200 rounded hidden"
+                        >
+                            <i data-lucide="x" class="w-3 h-3"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
 
-            <!-- Navigation -->
-            <nav class="header-nav">
-                <div class="container">
+            <!-- Navegação de categorias -->
+            <nav class="border-t border-border bg-muted/30">
+                <div class="container mx-auto px-4">
                     <!-- Desktop Navigation -->
-                    <div class="nav-desktop desktop-only" id="navDesktop">
-                        <!-- Categories will be inserted via JS -->
+                    <div id="desktopNav" class="hidden md:flex items-center gap-1 py-3 overflow-x-auto">
+                        <!-- Categories will be inserted here -->
                     </div>
 
                     <!-- Mobile Navigation -->
-                    <div class="nav-mobile mobile-only hidden" id="navMobile">
-                        <div class="nav-grid">
-                            <!-- Categories mobile will be inserted via JS -->
+                    <div id="mobileNav" class="md:hidden py-4 border-t border-border hidden">
+                        <div class="grid grid-cols-2 gap-2" id="mobileNavGrid">
+                            <!-- Categories will be inserted here -->
                         </div>
                     </div>
                 </div>
@@ -168,90 +143,91 @@
         </header>
 
         <!-- Main Content -->
-        <main id="mainContent" class="main-content">
+        <main class="flex-1">
             <!-- Home View -->
-            <div id="homeView" class="view active">
+            <div id="homeView" class="app-view active">
                 <!-- Hero Section -->
                 <section class="hero-section">
-                    <div class="container">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <h1 class="hero-title">
+                    <div class="container mx-auto px-4 py-16">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h1 class="text-5xl font-bold mb-6 leading-tight">
                                     Equipamentos Esportivos<br>
-                                    <span class="text-highlight">Premium</span>
+                                    <span class="text-red-600">Premium</span>
                                 </h1>
-                                <p class="hero-description">
+                                <p class="text-lg text-muted-foreground mb-8 leading-relaxed">
                                     Descubra nossa coleção completa de equipamentos esportivos importados 
                                     com qualidade premium e preços competitivos.
                                 </p>
-                                <div class="hero-features">
-                                    <div class="feature-item">
-                                        <i data-lucide="truck"></i>
+                                <div class="flex flex-col gap-4 mb-8">
+                                    <div class="flex items-center gap-3 text-muted-foreground">
+                                        <i data-lucide="truck" class="w-5 h-5 text-red-600 flex-shrink-0"></i>
                                         <span>Frete Grátis acima de R$ 200</span>
                                     </div>
-                                    <div class="feature-item">
-                                        <i data-lucide="shield-check"></i>
+                                    <div class="flex items-center gap-3 text-muted-foreground">
+                                        <i data-lucide="shield-check" class="w-5 h-5 text-red-600 flex-shrink-0"></i>
                                         <span>Garantia de Qualidade</span>
                                     </div>
-                                    <div class="feature-item">
-                                        <i data-lucide="refresh-cw"></i>
+                                    <div class="flex items-center gap-3 text-muted-foreground">
+                                        <i data-lucide="refresh-cw" class="w-5 h-5 text-red-600 flex-shrink-0"></i>
                                         <span>15 dias para devolução</span>
                                     </div>
                                 </div>
-                                <button class="hero-cta" onclick="App.scrollToProducts()">
+                                <button id="heroBtn" class="btn btn-primary btn-lg">
                                     Explorar Produtos
-                                    <i data-lucide="arrow-right"></i>
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
                                 </button>
                             </div>
-                            <div class="hero-image">
-                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" 
-                                     alt="Equipamentos Esportivos" class="hero-img">
-                                <div class="hero-image-overlay"></div>
+                            <div class="relative">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" 
+                                    alt="Equipamentos Esportivos" 
+                                    class="rounded-2xl shadow-2xl w-full h-96 object-cover"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent rounded-2xl"></div>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Products Section -->
-                <section class="products-section" id="productsSection">
-                    <div class="container">
-                        <div class="section-header">
-                            <h2>Nossos Produtos</h2>
-                            <p>Descubra nossa seleção de equipamentos esportivos premium</p>
+                <section id="productsSection" class="py-16">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl font-bold mb-4">Nossos Produtos</h2>
+                            <p class="text-lg text-muted-foreground">
+                                Descubra nossa seleção de equipamentos esportivos premium
+                            </p>
                         </div>
 
                         <!-- Search Results -->
                         <div id="searchResults" class="search-results hidden">
-                            <div class="search-info">
-                                <div class="search-summary">
-                                    <i data-lucide="search"></i>
+                            <div class="flex items-center justify-between gap-4 mb-6">
+                                <div class="flex items-center gap-2 text-blue-700">
+                                    <i data-lucide="search" class="w-4 h-4"></i>
                                     <span id="searchResultsText"></span>
                                 </div>
-                                <button class="clear-search-btn" id="clearSearchBtn">
-                                    <i data-lucide="x"></i>
+                                <button id="clearSearchBtn" class="btn btn-sm bg-blue-600 text-white hover:bg-blue-700">
+                                    <i data-lucide="x" class="w-3 h-3"></i>
                                     Limpar busca
                                 </button>
                             </div>
                         </div>
 
                         <!-- Products Grid -->
-                        <div class="products-grid" id="productsGrid">
-                            <!-- Products will be inserted via JS -->
-                        </div>
-
-                        <!-- Loading Products -->
-                        <div id="productsLoading" class="products-loading hidden">
-                            <div class="loading-spinner"></div>
-                            <p>Carregando produtos...</p>
+                        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <!-- Products will be inserted here -->
                         </div>
 
                         <!-- No Results -->
-                        <div id="noResults" class="no-results hidden">
-                            <div class="no-results-content">
-                                <i data-lucide="search-x"></i>
-                                <h3>Nenhum produto encontrado</h3>
-                                <p>Tente ajustar seus termos de busca ou navegar pelas categorias</p>
-                                <button class="btn-primary" onclick="App.clearSearch()">
+                        <div id="noResults" class="text-center py-16 hidden">
+                            <div class="max-w-md mx-auto">
+                                <i data-lucide="search-x" class="w-16 h-16 text-muted-foreground mx-auto mb-6"></i>
+                                <h3 class="text-xl font-semibold mb-4">Nenhum produto encontrado</h3>
+                                <p class="text-muted-foreground mb-6">
+                                    Tente ajustar seus termos de busca ou navegar pelas categorias
+                                </p>
+                                <button id="clearSearchFromNoResults" class="btn btn-primary">
                                     Ver todos os produtos
                                 </button>
                             </div>
@@ -260,44 +236,54 @@
                 </section>
 
                 <!-- Features Section -->
-                <section class="features-section">
-                    <div class="container">
-                        <div class="section-header">
-                            <h2>Por que escolher a Sports Imports?</h2>
-                            <p>Oferecemos a melhor experiência em equipamentos esportivos</p>
+                <section class="py-16 bg-muted/30">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl font-bold mb-4">Por que escolher a Sports Imports?</h2>
+                            <p class="text-lg text-muted-foreground">
+                                Oferecemos a melhor experiência em equipamentos esportivos
+                            </p>
                         </div>
                         
-                        <div class="features-grid">
-                            <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i data-lucide="truck"></i>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="text-center p-6 bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i data-lucide="truck" class="w-8 h-8 text-red-600"></i>
                                 </div>
-                                <h3>Entrega Rápida</h3>
-                                <p>Frete grátis em compras acima de R$ 200 e entrega expressa para todo o Brasil</p>
+                                <h3 class="text-lg font-semibold mb-2">Entrega Rápida</h3>
+                                <p class="text-muted-foreground text-sm">
+                                    Frete grátis em compras acima de R$ 200 e entrega expressa para todo o Brasil
+                                </p>
                             </div>
                             
-                            <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i data-lucide="shield-check"></i>
+                            <div class="text-center p-6 bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i data-lucide="shield-check" class="w-8 h-8 text-red-600"></i>
                                 </div>
-                                <h3>Qualidade Garantida</h3>
-                                <p>Produtos originais e testados com garantia completa de qualidade</p>
+                                <h3 class="text-lg font-semibold mb-2">Qualidade Garantida</h3>
+                                <p class="text-muted-foreground text-sm">
+                                    Produtos originais e testados com garantia completa de qualidade
+                                </p>
                             </div>
                             
-                            <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i data-lucide="headphones"></i>
+                            <div class="text-center p-6 bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i data-lucide="headphones" class="w-8 h-8 text-red-600"></i>
                                 </div>
-                                <h3>Suporte Premium</h3>
-                                <p>Atendimento especializado para ajudar você a escolher o melhor equipamento</p>
+                                <h3 class="text-lg font-semibold mb-2">Suporte Premium</h3>
+                                <p class="text-muted-foreground text-sm">
+                                    Atendimento especializado para ajudar você a escolher o melhor equipamento
+                                </p>
                             </div>
                             
-                            <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i data-lucide="refresh-cw"></i>
+                            <div class="text-center p-6 bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i data-lucide="refresh-cw" class="w-8 h-8 text-red-600"></i>
                                 </div>
-                                <h3>Devolução Fácil</h3>
-                                <p>15 dias para devolução sem custos adicionais e processo simplificado</p>
+                                <h3 class="text-lg font-semibold mb-2">Devolução Fácil</h3>
+                                <p class="text-muted-foreground text-sm">
+                                    15 dias para devolução sem custos adicionais e processo simplificado
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -305,121 +291,116 @@
             </div>
 
             <!-- Product View -->
-            <div id="productView" class="view">
-                <!-- Content will be inserted via JS -->
+            <div id="productView" class="app-view">
+                <!-- Content will be inserted here -->
             </div>
 
             <!-- Checkout View -->
-            <div id="checkoutView" class="view">
-                <!-- Content will be inserted via JS -->
+            <div id="checkoutView" class="app-view">
+                <!-- Content will be inserted here -->
             </div>
         </main>
 
         <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <div class="footer-logo">
-                            <div class="logo-container">
-                                <div class="logo-icon">
-                                    <i data-lucide="dumbbell"></i>
-                                </div>
-                                <div class="logo-badge"></div>
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="relative bg-red-600 p-3 rounded-xl shadow-lg">
+                                <i data-lucide="dumbbell" class="w-6 h-6 text-white"></i>
+                                <div class="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full"></div>
                             </div>
-                            <div class="logo-text">
-                                <h3>Sports Imports</h3>
-                                <p>Equipamentos Esportivos Premium</p>
+                            <div>
+                                <h3 class="text-lg font-bold">Sports Imports</h3>
+                                <p class="text-xs text-gray-300">Equipamentos Esportivos Premium</p>
                             </div>
                         </div>
-                        <p class="footer-description">
+                        <p class="text-gray-300 text-sm mb-4">
                             Sua loja online de confiança para equipamentos esportivos importados 
                             com qualidade premium e preços competitivos.
                         </p>
-                        <div class="social-links">
-                            <a href="#" aria-label="Facebook">
-                                <i data-lucide="facebook"></i>
+                        <div class="flex gap-3">
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                                <i data-lucide="facebook" class="w-4 h-4"></i>
                             </a>
-                            <a href="#" aria-label="Instagram">
-                                <i data-lucide="instagram"></i>
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                                <i data-lucide="instagram" class="w-4 h-4"></i>
                             </a>
-                            <a href="#" aria-label="twitter">
-                                <i data-lucide="twitter"></i>
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                                <i data-lucide="twitter" class="w-4 h-4"></i>
                             </a>
-                            <a href="#" aria-label="YouTube">
-                                <i data-lucide="youtube"></i>
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                                <i data-lucide="youtube" class="w-4 h-4"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="footer-section">
-                        <h4>Links Rápidos</h4>
-                        <ul>
-                            <li><a href="#" onclick="App.setCategory('Todos')">Todos os Produtos</a></li>
-                            <li><a href="#" onclick="App.setCategory('Calçados')">Calçados</a></li>
-                            <li><a href="#" onclick="App.setCategory('Musculação')">Musculação</a></li>
-                            <li><a href="#" onclick="App.setCategory('Yoga')">Yoga</a></li>
-                            <li><a href="#" onclick="App.setCategory('Acessórios')">Acessórios</a></li>
+                    <div>
+                        <h4 class="font-semibold mb-4">Links Rápidos</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="#" class="hover:text-white transition-colors">Todos os Produtos</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Calçados</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Musculação</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Yoga</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Acessórios</a></li>
                         </ul>
                     </div>
 
-                    <div class="footer-section">
-                        <h4>Atendimento</h4>
-                        <ul>
-                            <li><a href="#">Central de Ajuda</a></li>
-                            <li><a href="#">Política de Devolução</a></li>
-                            <li><a href="#">Rastreamento</a></li>
-                            <li><a href="#">Frete Grátis</a></li>
-                            <li><a href="#">Garantia</a></li>
+                    <div>
+                        <h4 class="font-semibold mb-4">Atendimento</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="#" class="hover:text-white transition-colors">Central de Ajuda</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Política de Devolução</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Rastreamento</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Frete Grátis</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Garantia</a></li>
                         </ul>
                     </div>
 
-                    <div class="footer-section">
-                        <h4>Contato</h4>
-                        <ul>
-                            <li><a href="mailto:contato@sportsimports.com">contato@sportsimports.com</a></li>
-                            <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                    <div>
+                        <h4 class="font-semibold mb-4">Contato</h4>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><a href="mailto:contato@sportsimports.com" class="hover:text-white transition-colors">contato@sportsimports.com</a></li>
+                            <li><a href="tel:+5511999999999" class="hover:text-white transition-colors">(11) 99999-9999</a></li>
                             <li>Seg-Sex: 9h às 18h</li>
                             <li>Sáb: 9h às 14h</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="footer-bottom">
-                    <div class="footer-bottom-content">
-                        <p>&copy; 2024 Sports Imports. Todos os direitos reservados.</p>
-                        <div class="payment-methods">
-                            <span>Aceitamos:</span>
-                            <div class="payment-icons">
-                                <i data-lucide="credit-card"></i>
-                                <i data-lucide="smartphone"></i>
-                                <i data-lucide="banknote"></i>
-                            </div>
+                <div class="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-gray-300">
+                        &copy; 2024 Sports Imports. Todos os direitos reservados.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <span class="text-sm text-gray-300">Aceitamos:</span>
+                        <div class="flex gap-2">
+                            <i data-lucide="credit-card" class="w-5 h-5 text-gray-300"></i>
+                            <i data-lucide="smartphone" class="w-5 h-5 text-gray-300"></i>
+                            <i data-lucide="banknote" class="w-5 h-5 text-gray-300"></i>
                         </div>
-                        <div class="footer-links">
-                            <a href="#">Termos de Uso</a>
-                            <a href="#">Privacidade</a>
-                        </div>
+                    </div>
+                    <div class="flex gap-4 text-sm">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">Termos de Uso</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">Privacidade</a>
                     </div>
                 </div>
             </div>
         </footer>
 
         <!-- Cart Sidebar -->
-        <div id="cartSidebar" class="sidebar hidden">
-            <div class="sidebar-overlay"></div>
-            <div class="sidebar-content">
-                <!-- Content will be inserted via JS -->
-            </div>
+        <div id="cartSidebar" class="sidebar">
+            <!-- Cart content will be inserted here -->
         </div>
 
         <!-- Favorites Sidebar -->
-        <div id="favoritesSidebar" class="sidebar hidden">
-            <div class="sidebar-overlay"></div>
-            <div class="sidebar-content">
-                <!-- Content will be inserted via JS -->
-            </div>
+        <div id="favoritesSidebar" class="sidebar">
+            <!-- Favorites content will be inserted here -->
         </div>
+
+        <!-- Toast Container -->
+        <div id="toastContainer" class="toast-container"></div>
     </div>
 
     <!-- JavaScript Files -->
