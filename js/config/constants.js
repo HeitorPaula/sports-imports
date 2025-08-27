@@ -1,49 +1,44 @@
-// Sports Imports - Constants and Configuration
+// Sports Imports - Configuration Constants
 
-// Application configuration
 const APP_CONFIG = {
   name: 'Sports Imports',
-  version: '1.0.0',
-  description: 'Equipamentos Esportivos Premium'
-};
-
-// Storage keys
-const STORAGE_KEYS = {
-  CART: 'sports-imports-cart',
-  FAVORITES: 'sports-imports-favorites',
-  USER_PREFERENCES: 'sports-imports-preferences'
-};
-
-// Categories
-const CATEGORIES = ['Todos', 'Calçados', 'Musculação', 'Yoga', 'Acessórios', 'Suplementos', 'Kits'];
-
-// Shipping configuration
-const SHIPPING_CONFIG = {
-  FREE_SHIPPING_THRESHOLD: 200,
-  SHIPPING_COST: 15.90
-};
-
-// Animation durations
-const ANIMATION_DURATION = {
-  FAST: 150,
-  NORMAL: 300,
-  SLOW: 500
-};
-
-// Toast configuration
-const TOAST_CONFIG = {
-  DURATION: {
-    SUCCESS: 3000,
-    ERROR: 4000,
-    WARNING: 3500,
-    INFO: 3000
+  tagline: 'Equipamentos Esportivos Premium',
+  
+  // Shipping
+  freeShippingThreshold: 200,
+  standardShippingCost: 15.90,
+  
+  // Returns
+  returnPeriod: 15,
+  
+  // Storage keys
+  storage: {
+    cart: 'sports-imports-cart',
+    favorites: 'sports-imports-favorites'
+  },
+  
+  // Toast settings
+  toast: {
+    duration: 3000,
+    errorDuration: 4000
+  },
+  
+  // Animation durations
+  animation: {
+    fast: 150,
+    normal: 300,
+    slow: 500
+  },
+  
+  // Breakpoints (must match CSS)
+  breakpoints: {
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+    xxl: 1536
   }
 };
 
 // Export to global scope
 window.APP_CONFIG = APP_CONFIG;
-window.STORAGE_KEYS = STORAGE_KEYS;
-window.CATEGORIES = CATEGORIES;
-window.SHIPPING_CONFIG = SHIPPING_CONFIG;
-window.ANIMATION_DURATION = ANIMATION_DURATION;
-window.TOAST_CONFIG = TOAST_CONFIG;

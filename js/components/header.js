@@ -1,121 +1,89 @@
-// Header component functionality
-const Header = {
-  elements: {
-    header: null,
-    searchInput: null,
-    searchInputMobile: null,
-    searchClear: null,
-    searchClearMobile: null,
-    favoritesBtn: null,
-    favoritesBadge: null,
-    cartBtn: null,
-    cartBadge: null,
-    cartTotal: null,
-    mobileMenuBtn: null,
-    menuIcon: null,
-    navMobile: null,
-    navDesktop: null
-  },
+// Sports Imports - Header Component
+
+class HeaderComponent {
+  constructor() {
+    this.elements = {};
+    this.state = {
+      isMobileMenuOpen: false,
+      selectedCategory: 'Todos'
+    };
+  }
   
-  state: {
-    isMobileMenuOpen: false,
-    selectedCategory: 'Todos'
-  },
-  
-  init() {
+  async init() {
     this.bindElements();
     this.setupEventListeners();
     this.renderCategories();
     this.updateCartDisplay();
     this.updateFavoritesDisplay();
-  },
+  }
   
   bindElements() {
-    this.elements.header = document.getElementById('header');
-    this.elements.searchInput = document.getElementById('searchInput');
-    this.elements.searchInputMobile = document.getElementById('searchInputMobile');
-    this.elements.searchClear = document.getElementById('searchClear');
-    this.elements.searchClearMobile = document.getElementById('searchClearMobile');
-    this.elements.favoritesBtn = document.getElementById('favoritesBtn');
-    this.elements.favoritesBadge = document.getElementById('favoritesBadge');
-    this.elements.cartBtn = document.getElementById('cartBtn');
-    this.elements.cartBadge = document.getElementById('cartBadge');
-    this.elements.cartTotal = document.getElementById('cartTotal');
-    this.elements.mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    this.elements.menuIcon = document.getElementById('menuIcon');
-    this.elements.navMobile = document.getElementById('navMobile');
-    this.elements.navDesktop = document.getElementById('navDesktop');
-  },
+    this.elements = {
+      searchInput: document.getElementById('searchInput'),
+      searchInputMobile: document.getElementById('searchInputMobile'),
+      searchClear: document.getElementById('searchClear'),
+      searchClearMobile: document.getElementById('searchClearMobile'),
+      favoritesBtn: document.getElementById('favoritesBtn'),
+      favoritesBadge: document.getElementById('favoritesBadge'),
+      cartBtn: document.getElementById('cartBtn'),
+      cartBadge: document.getElementById('cartBadge'),
+      cartTotal: document.getElementById('cartTotal'),
+      mobileMenuBtn: document.getElementById('mobileMenuBtn'),
+      menuIcon: document.getElementById('menuIcon'),
+      navMobile: document.getElementById('navMobile'),
+      navDesktop: document.getElementById('navDesktop')
+    };
+  }
   
   setupEventListeners() {
     // Search functionality
     if (this.elements.searchInput) {
-      this.elements.searchInput.addEventListener('input', debounce((e) => {
+      this.elements.searchInput.addEventListener('input', Utils.debounce((e) => {
         this.handleSearch(e.target.value);
-        this.syncSearchInputs(e.target.value);
       }, 300));
     }
     
     if (this.elements.searchInputMobile) {
-      this.elements.searchInputMobile.addEventListener('input', debounce((e) => {
+      this.elements.searchInputMobile.addEventListener('input', Utils.debounce((e) => {
         this.handleSearch(e.target.value);
-        this.syncSearchInputs(e.target.value);
       }, 300));
     }
     
-    // Search clear buttons
+    // Clear buttons
     if (this.elements.searchClear) {
-      this.elements.searchClear.addEventListener('click', () => {
-        this.clearSearch();
-      });
+      this.elements.searchClear.addEventListener('click', () => this.clearSearch());
     }
     
     if (this.elements.searchClearMobile) {
-      this.elements.searchClearMobile.addEventListener('click', () => {
-        this.clearSearch();
-      });
+      this.elements.searchClearMobile.addEventListener('click', () => this.clearSearch());
     }
     
-    // Mobile menu toggle
+    // Mobile menu
     if (this.elements.mobileMenuBtn) {
-      this.elements.mobileMenuBtn.addEventListener('click', () => {
-        this.toggleMobileMenu();
-      });
+      this.elements.mobileMenuBtn.addEventListener('click', () => this.toggleMobileMenu());
     }
     
-    // Cart button
+    // Cart and favorites
     if (this.elements.cartBtn) {
-      this.elements.cartBtn.addEventListener('click', () => {
-        Events.dispatch('open-cart');
-      });
+      this.elements.cartBtn.addEventListener('click', () => App.openCart());
     }
     
-    // Favorites button
     if (this.elements.favoritesBtn) {
-      this.elements.favoritesBtn.addEventListener('click', () => {
-        Events.dispatch('open-favorites');
-      });
+      this.elements.favoritesBtn.addEventListener('click', () => App.openFavorites());
     }
     
-    // Listen to cart changes
-    Events.onCartChange(() => {
-      this.updateCartDisplay();
-    });
-    
-    // Listen to favorites changes
-    Events.onFavoritesChange(() => {
-      this.updateFavoritesDisplay();
-    });
-  },
+    // Listen to storage changes
+    window.addEventListener('cart-changed', () => this.updateCartDisplay());
+    window.addEventListener('favorites-changed', () => this.updateFavoritesDisplay());
+  }
   
   renderCategories() {
     if (!this.elements.navDesktop || !this.elements.navMobile) return;
     
-    // Desktop categories
-    const desktopHTML = categories.map(category => `
+    const desktopHTML = CATEGORIES.map(category => `
       <button 
         class="category-btn ${category === this.state.selectedCategory ? 'active' : ''}"
-        onclick="Header.selectCategory('${category}')"
+        onclick="App.components.header.selectCategory('${category}')"
       >
         ${category}
       </button>
@@ -123,36 +91,23 @@ const Header = {
     
     this.elements.navDesktop.innerHTML = desktopHTML;
     
-    // Mobile categories
-    const mobileHTML = `
-      <div class="nav-grid">
-        ${categories.map(category => `
-          <button 
-            class="category-btn ${category === this.state.selectedCategory ? 'active' : ''}"
-            onclick="Header.selectCategory('${category}'); Header.closeMobileMenu();"
-          >
-            ${category}
-          </button>
-        `).join('')}
-      </div>
-    `;
+    const mobileHTML = CATEGORIES.map(category => `
+      <button 
+        class="category-btn ${category === this.state.selectedCategory ? 'active' : ''}"
+        onclick="App.components.header.selectCategory('${category}'); App.components.header.closeMobileMenu();"
+      >
+        ${category}
+      </button>
+    `).join('');
     
     this.elements.navMobile.innerHTML = mobileHTML;
-  },
-  
-  selectCategory(category) {
-    this.state.selectedCategory = category;
-    this.renderCategories();
-    Events.dispatch('category-changed', { category });
-  },
+  }
   
   handleSearch(searchTerm) {
-    // Update clear button visibility
+    this.syncSearchInputs(searchTerm);
     this.updateClearButtonVisibility(searchTerm);
-    
-    // Dispatch search event
-    Events.dispatch('search-changed', { searchTerm });
-  },
+    App.updateSearch(searchTerm);
+  }
   
   syncSearchInputs(value) {
     if (this.elements.searchInput && this.elements.searchInput.value !== value) {
@@ -161,7 +116,7 @@ const Header = {
     if (this.elements.searchInputMobile && this.elements.searchInputMobile.value !== value) {
       this.elements.searchInputMobile.value = value;
     }
-  },
+  }
   
   updateClearButtonVisibility(searchTerm) {
     const hasValue = searchTerm.trim().length > 0;
@@ -173,19 +128,15 @@ const Header = {
     if (this.elements.searchClearMobile) {
       this.elements.searchClearMobile.classList.toggle('hidden', !hasValue);
     }
-  },
+  }
   
   clearSearch() {
-    if (this.elements.searchInput) {
-      this.elements.searchInput.value = '';
-    }
-    if (this.elements.searchInputMobile) {
-      this.elements.searchInputMobile.value = '';
-    }
+    if (this.elements.searchInput) this.elements.searchInput.value = '';
+    if (this.elements.searchInputMobile) this.elements.searchInputMobile.value = '';
     
     this.updateClearButtonVisibility('');
-    Events.dispatch('search-cleared');
-  },
+    App.clearSearch();
+  }
   
   toggleMobileMenu() {
     this.state.isMobileMenuOpen = !this.state.isMobileMenuOpen;
@@ -195,16 +146,14 @@ const Header = {
     }
     
     if (this.elements.menuIcon) {
-      // Update menu icon
       const iconName = this.state.isMobileMenuOpen ? 'x' : 'menu';
       this.elements.menuIcon.setAttribute('data-lucide', iconName);
       
-      // Reinitialize lucide icons
       if (window.lucide) {
         lucide.createIcons();
       }
     }
-  },
+  }
   
   closeMobileMenu() {
     this.state.isMobileMenuOpen = false;
@@ -220,12 +169,11 @@ const Header = {
         lucide.createIcons();
       }
     }
-  },
+  }
   
   updateCartDisplay() {
     const { total, itemCount } = CartStorage.getTotals();
     
-    // Update badge
     if (this.elements.cartBadge) {
       if (itemCount > 0) {
         this.elements.cartBadge.textContent = itemCount;
@@ -235,14 +183,14 @@ const Header = {
       }
     }
     
-    // Update total
     if (this.elements.cartTotal) {
-      this.elements.cartTotal.textContent = formatCurrency(total);
+      this.elements.cartTotal.textContent = Utils.formatCurrency(total);
     }
-  },
+  }
   
   updateFavoritesDisplay() {
-    const count = FavoritesStorage.getCount();
+    const items = FavoritesStorage.getItems();
+    const count = items.length;
     
     if (this.elements.favoritesBadge) {
       if (count > 0) {
@@ -252,27 +200,17 @@ const Header = {
         this.elements.favoritesBadge.classList.add('hidden');
       }
     }
-  },
-  
-  getSelectedCategory() {
-    return this.state.selectedCategory;
-  },
-  
-  getCurrentSearch() {
-    return this.elements.searchInput ? this.elements.searchInput.value.trim() : '';
   }
-};
+  
+  setCategory(category) {
+    this.state.selectedCategory = category;
+    this.renderCategories();
+    App.updateCategory(category);
+  }
+  
+  selectCategory(category) {
+    this.setCategory(category);
+  }
+}
 
-// Global functions for onclick handlers
-window.scrollToProducts = function() {
-  scrollToElement('productsSection', 100);
-};
-
-window.setCategory = function(category) {
-  Header.selectCategory(category);
-  scrollToElement('productsSection', 100);
-};
-
-window.clearSearch = function() {
-  Header.clearSearch();
-};
+window.HeaderComponent = HeaderComponent;
